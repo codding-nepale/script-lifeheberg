@@ -9,7 +9,7 @@ function blockip()
         iptables -I INPUT -s "$IP" -j DROP -v
         iptables -t mangle -A PREROUTING -s "$IP" -j DROP -v
     else
-        echo "Ok you don't have PVE (Proxmox Virtual Environement) ?"
+        echo "Ok you don't have PVE (Proxmox Virtual Environement)"
         iptables -I INPUT -s "$IP" -j DROP -v
     fi
 
